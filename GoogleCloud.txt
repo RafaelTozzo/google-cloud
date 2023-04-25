@@ -1,0 +1,185 @@
+Pronto! Assinatura de 30 dias habilitada em conta,  agora é só clicar nos links abaixo e completar os 4 cursos:
+
+Curso 1:  Cloud Computing Fundamentals: https://www.cloudskillsboost.google/course_templates/177
+
+Curso 2:  Infrastructure in Google Cloud: https://www.cloudskillsboost.google/course_templates/182
+
+Curso 3 : Networking and Security: https://www.cloudskillsboost.google/course_templates/188
+
+Curso 4: Data, ML, and AI in Google Cloud: https://www.cloudskillsboost.google/course_templates/189
+
+
+Uma vez finalizados os 4 cursos, é necessário completar os laboratórios de desafio que testarão seus conhecimentos adquiridos (4 selos de habilidades- skill badges). 
+
+Selo de Habilidade 1:  Crie e gerencie recursos na nuvem 
+
+Selo de Habilidade 2: Executar tarefas de infraestrutura de base 
+
+Selo de Habilidade 3: Criar e proteger redes no Google Cloud
+
+Selo de Habilidade 4: Execute tarefas básicas de dados, ML e IA
+
+Testes:
+    Qual ferramenta de linha de comando faz parte do SDK Cloud?
+        gsutil
+
+
+Curso 1:
+
+O mais utilizado passou a ser o IaaS
+
+IaaS - Infrastructure as a service:
+    - clientes pagam pelos recursos alocados antecipadamente
+    - recucos brutos de computação
+    - armazenamento
+    - rede
+    - Compute Engine:
+        criar/executar maquinas virtuais
+        hospedagem servidor Web 
+        hospedagem backends de aplicativos
+
+
+
+PaaS - Platform as a service:
+    - os clientes pagam pelos recursos que são usados
+    - vincula codigo da bibliotecas que dao infraestrutura aos aplicativos(podendo dedicar mais recursos a logica do palicativo)
+    - app engine
+
+SaaS - Software as a service:
+    - os aplicativos SaaS não são instalados no PC eles rodam na nuvem como serciço e são consumidos pelos usuarios na internet
+      um exemplo são: Gmail, Drive são classificados como SaaS
+
+
+Camadas infraestrutura do Google Cloud:
+    Para verificar as regioes de atuação do Google Cloude: cloud.google.com/about/locations
+    
+    - 1º é rede e segurança, que forma a base de apoio
+    - 2º computação e armazenamento, o google separa ou desacopla computação e armazenamento para ter escalonamento
+    - 3º Big Data e machine learning usados para ingerir, armazenar, processar e gerar insights de negócios, pipelines de dados e modelos de ML
+
+
+Interagir com o Google Cloud:
+    - Console Cloud:
+        é a interface grafica do usuario (GUI) um interface Web
+
+        Hierarquia 4 niveis:
+            1º recursos (resources):
+                maquinas virtuais
+                buckets do cloud storage
+                tabelas do bigquery
+                qualquer coisa no google cloud
+
+            2º projetos (projects):
+                os recursos são organizados em projetos, que são o segundo nível
+                base serviços Google Cloud, gerenciar APIs, ativar cobranças, adicionar e remover colaboradores e ativar outros serviços do Google.
+                3 atributos de identificação: 
+                    ID(unico, assinado pelo google e pode ser editado na criação, imutavel após a criação)
+                    Name(pode ser alterado, selecionado pelo adm) 
+                    Number(unico, assinado pelo google, imutavel)
+
+            3º pastas(folder):
+                os projetos podem ser organizados em pastas ou subpastas
+                com as pastas, você agrupa esses recursos por departamento
+                para usar pastas é preciso um nó organizacional que é o recurso superior da hierarquia do Google Cloud
+
+            4º nó organizacional (organizational node):
+                inclui todos os projetos, pastas e recursos da organização.
+                tudo relacionado à conta fica nesse nó, incluindo projetos, pastas e outros recursos
+
+
+    - SDK Cloud:
+        cloud.google.com/sdk
+
+    - Cloud Shell:
+        console.cloud.google.com
+
+        comando basicos:
+            gcloud -h 
+            gcloud --help
+            para sair digite Q dps enter
+
+        lista configurações ambiente:
+            gcloud config list 
+        
+        listar todas propriedades  e as configurações:
+            gcloud config list --all
+
+        listar components:
+            gcloud components list
+
+        listar instancia de computação projeto:
+            gcloud compute instances list 
+
+        listar nome da conta ativa:
+            gcloud auth list
+
+        listar o ID: 
+           gcloud config list project
+
+        listar vm:
+            gcloud compute instances list --filter"name=('vmName')"
+
+        connect VM com SSH:
+            gcloud compute ssh gcelab2 --zone $ZONE
+
+        listar regras firewall:
+            gcloud compute firewall-rules list
+        
+        definir região:
+            gcloud config set compute/region
+        
+        consultar região do projeto:
+            gcloud config get-value compute/region
+        
+        definir zona:
+            gcloud config set compute/zone
+        
+        consultar zona do projeto:
+            gcloud config get-value compute/zone
+
+        consultar ID projeto:
+            gcloud config get-value project
+
+        consultar detalhes do projeto:
+            gcloud compute project-info describe --project $(gcloud config get-value project)
+
+        criar variavel de ambiente para armazenar ID:
+            export PROJECT_ID=$(gcloud config get-value project)  
+
+        criar variavel de ambiente para armazenar Zone:
+            export ZONE=$(gcloud config get-value compute/zone)
+
+        consultar variaveis:
+            echo -e "PROJECT ID: $PROJECT_ID\nZONE: $ZONE"
+
+        criar maquina virtual:
+            gcloud compute instances create gcelab2 --machine-type e2-medium --zone $ZONE
+            gcloud compute instances create --help
+        
+              
+
+    - APIs
+        os serviços do Google Cloud oferecem APIs para o código que você cria controlá-los
+
+
+Faturamento Google Cloud:
+    cloud.google.com/products/calculator
+    
+    É feito em projetos, você associa uma conta de faturamento a ele, nessa conta, 
+    você configura todos os dados de faturamento incluindo opção de pagamento.
+
+    Você pode associar as contas a um ou mais projetos, mas os projetos sem essa conta só podem usar serviços 
+    sem custo do Google Cloud. A cobrança e fatura automáticas das contas é feita a cada mês ou no limite estabelecido.
+
+    É possível usar subcontas para separar os faturamentos por projeto. Alguns clientes que revendem serviços do Google 
+    Cloud usam subcontas para cada cliente
+
+    Para evitar grandes cobranças acidentais no Google Cloud:
+        pode definir orçamentos em contas de faturamento ou projetos
+        orçamento pode ser um limite fixo ou estar atrelado a outra métrica 
+        criar um alerta emitido quando o orçamento se aproxima do limite
+
+    Google também tem cotas que evitam o consumo excessivo de recursos devido a erro ou ataque protegendo os proprietários da conta:
+        Há dois tipos de cotas ambas são aplicadas a projetos: 
+            cotas de taxa e de alocação 
+            cotas de taxa são zeradas após certo tempo
