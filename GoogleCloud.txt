@@ -39,15 +39,57 @@ IaaS - Infrastructure as a service:
         hospedagem backends de aplicativos
 
 
+Hybrid:
+    Google Kubernetes Engine:
+        A ideia do contêiner é oferecer escalonabilidade independente de cargas de trabalho em PaaS
+        e uma camada de abstração do SO e do hardware em IaaS.
+
+        Kubernetes serve para orquestrar contêineres e simplificar o gerenciamento de ambientes conteinerizados. 
+        O Kubernetes pode ser instalado em um grupo de servidores gerenciados ou executado como serviço hospedado no Google Cloud
+
 
 PaaS - Platform as a service:
     - os clientes pagam pelos recursos que são usados
     - vincula codigo da bibliotecas que dao infraestrutura aos aplicativos(podendo dedicar mais recursos a logica do palicativo)
-    - app engine
+    - app engine:
+        armazenamento persistente com consultas, classificação e transações
+        escalonamento e balanceamento de carga automáticos
+        filas de tarefas assíncronas para realizar trabalhos fora do escopo de uma solicitação
+        tarefas agendadas para acionar eventos em horários específicos ou intervalos regulares
+        integração com outros serviços e APIs do Google Cloud
+
 
 SaaS - Software as a service:
     - os aplicativos SaaS não são instalados no PC eles rodam na nuvem como serciço e são consumidos pelos usuarios na internet
       um exemplo são: Gmail, Drive são classificados como SaaS
+
+
+Serveless platform:
+    Cloud Run:
+        Etapas para criação:
+            1º cogido/aplicativo - precisa iniciar em um servidor que detecte a solicitação web
+            2º criar e empacotar o aplicativo em uma img de contêiner no Cloud Run
+            3º você recebe um URL HTTPS exclusivo de volta para executar seu novo aplicativo conteinerizado
+               o Cloud Run inicia o contêiner sob demanda para processar solicitações e garante que as solicitações 
+               recebidas sejam processadas com a adição e remoção dinâmicas de contêineres.
+
+        - plataforma de computação gerenciada para executar contêineres sem estado com solicitações da Web ou eventos do Pub/Sub
+        - usa o Knative um ambiente de execução e API aberto criado no Kubernetes
+        - pode ser gerenciado no Google Cloud, GKE ou qualquer local que executa Knative
+
+
+Serveless logic:
+    - cloud functions:
+        JavaScript, Node.js, Python, Go, executadas em um ambiente gerenciado de Node.js no Google Cloud
+        Eventos do Cloud Storage e Pub/Sub podem ativar o Cloud Functions de maneira assíncrona ou invocar o HTTP para execução síncrona
+
+    - cloud functions triggers:
+        https://cloud.google.com/functions/docs/calling
+
+    - cloud functions event-driven
+        https://cloud.google.com/functions/docs/writing/write-event-driven-functions#cloudevent-example-nodejs
+        No Cloud Functions, use funções orientadas a eventos para que uma função seja invocada automaticamente
+        em resposta a um evento que ocorre no ambiente da nuvem.
 
 
 Camadas infraestrutura do Google Cloud:
@@ -183,3 +225,59 @@ Faturamento Google Cloud:
         Há dois tipos de cotas ambas são aplicadas a projetos: 
             cotas de taxa e de alocação 
             cotas de taxa são zeradas após certo tempo
+
+
+################################################################################################################
+Teste - Entao afinal o que é a nuvem:
+
+Qual opção a seguir é um atributo fundamental da computação em nuvem?
+Os clientes têm acesso aos recursos de computação pela Internet e em qualquer lugar.
+
+Qual serviço fornece capacidades brutas de computação, armazenamento e rede organizadas virtualmente na forma de recursos parecidos com data centers físicos?
+IaaS
+
+Onde os recursos do Google Cloud são implantados?
+zona
+
+
+Qual é a nuvem de terceira onda totalmente automatizada e elástica que consiste na combinação de serviços automatizados e dados escalonáveis?
+Arquitetura com base em contêineres
+
+################################################################################################################
+Teste - Comece com uma plataforma:
+
+Qual é a finalidade das APIs oferecidas por vários serviços do Google Cloud?
+As APIs permitem que o código seja escrito para controlar os serviços do Google Cloud
+
+Qual identificador do projeto não precisa ser único globalmente?
+Nome do projeto
+
+Qual ferramenta de linha de comando faz parte do SDK Cloud?
+gsutil
+
+Qual ferramenta de faturamento foi projetada para evitar o consumo excessivo de recursos devido a um erro ou a um ataque malicioso?
+Cotas
+
+Na hierarquia de recursos do Google Cloud, em qual entidade os recursos são organizados?
+Projetos
+
+################################################################################################################
+Teste - Criar seus apps com o google cloud:
+
+Qual ambiente do App Engine é baseado em instâncias pré-configuradas de contêineres? 
+ambiente padrão
+
+Qual opção a seguir é um ambiente leve de execução sem servidor e totalmente gerenciado para desenvolver e conectar serviços na nuvem?
+cloud functions
+
+Qual opção a seguir é um ambiente gerenciado para implantar apps conteinerizados?
+google kubernetes engine
+
+Qual opção a seguir é uma plataforma gerenciada de computação que permite executar contêineres sem estado usando solicitações da Web ou eventos do Pub/Sub?
+cloud run
+
+qual serviço de computação seria consederado IaaS?
+App Engine
+
+Qual é o recurso do Compute Engine que permite adicionar ou subtrair VMs de um aplicativo com base em métricas de carga?
+Escalonamento automático
