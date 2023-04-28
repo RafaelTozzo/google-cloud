@@ -1,0 +1,134 @@
+Google Cloud Computing Foundations: Infrastructure in Google Cloud
+
+
+GC databases and storage services:
+
+    Relational databases:
+
+        - Cloud Storage (fully managed scalable service):
+            common use cases:
+                Binary large-object(BLOB) storage
+                Online content 
+                Backup and archiving 
+                Storage of intermediate results
+            
+            Organized in buckets
+            Bucket need a exclusive global name
+            Specific geographic location to be store and min latency
+
+            Have a option to active a "GIT" for version control
+            Have a option to set lifeycle polices
+
+            4 basic Cloud Storage classes:
+                All classes have:
+                    Unlimited storage(no mim object size)
+                    Worldwide accessibility and locations
+                    Low latency and high durability
+                    A uniform experience
+                    Geo-redundancy
+                1 - Standard Storage: Hot data
+                2 - Nearline Storage: Once per month
+                3 - Coldline Storage: Once every 90 days
+                4 - Archive Storage: Once a year
+
+            Content storage and delivery
+            Data analytics and general compute
+            Backup and archival storage 
+
+        - Cloud SQL:
+            Suport:
+                MySQL
+                PostgreSQL
+                SQL Server
+
+        - Cloud Spanner:
+                Applications that require:
+                    built-in high availability
+                    strong global consistency
+                    database sizes tha exceed 2TB 
+                    high numbers of input/output, and thousands of reads/writes per second
+                Scales horizontally
+                Stronglys consistent
+                Speaks SQL
+
+
+    NoSQL databases:
+        - Firestore:
+            Is a fully managed, serverless NoSQL document repository that accepts ACID transactions.
+            Flexible
+            Scales horizontally 
+            for web, mobile, and server development
+
+
+        - Bigtable
+            Is a petabyte-scale sparse-column NoSQL database with low write latency.
+            
+            Handle massive workloads
+            Consistent low latency 
+            Hight throughput
+            
+            Great choice for:
+                Operational applications 
+                Analytical applications 
+
+            Using APIs to read and write data:
+                Data service layer:
+                    Managed VMs 
+                    HBase REST Server
+                    Java Server 
+
+            Streaming data into Bigtable:
+                Stream processing frameworks:
+                    Data flow
+                    Spark Streaming 
+                    Storm
+            
+            Using batch processes to read and write data:
+                Batch processes:
+                    - Hadoop MapReduce
+                    - Dataflow
+                    - Spark 
+
+
+    Unstructured data:
+        Usually used for:
+            Documentes
+            Images
+            Audio files
+        
+        Databases:
+            - Cloud Storage
+
+
+    Structured:
+
+        Transactional worload:
+            SQL:
+                Local/regional scability: Cloud SQL
+                Global scability: Cloud Spanner           
+            NoSQL: Firestore 
+        
+        Analytical workload:
+            SQL: BigQuery 
+            NoSQL: Cloud Bigtable 
+
+        Tables 
+        Rows 
+        Columns 
+
+#####################################################################
+Test: Where should i store my files?
+
+Google Cloud offers two managed relational database services. Which ones are they?
+- Cloud Spanner
+- Cloud SQL 
+
+Which storage service is best suited for unstructured data?
+- Cloud Storage
+
+Which storage solution is a petabyte-scale NoSQL database?
+- Bigtable
+
+You're looking for an unstructured storage solution to archive documents that may 
+never be accessed again. Which Cloud Storage class is the best choice?
+- Archive Storage
