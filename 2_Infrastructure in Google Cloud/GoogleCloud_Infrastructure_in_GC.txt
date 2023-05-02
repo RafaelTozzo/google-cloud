@@ -116,6 +116,115 @@ GC databases and storage services:
         Rows 
         Columns 
 
+
+
+API (Application programming interface):
+
+    What is a API?:
+        A clean, well-defined interface
+        Underlying implementation can change
+        Changes to the API are made with versions
+
+
+    What is a REST API?:
+        A set of constraints a service must comply with
+        An API that uses HTTP requests to GET, PUT, POST, DELETE data 
+        Designed to set up a format for applications to communicate 
+        Great for cloud applications because they are stateless 
+        Authentication via OAuth and security by leveraging tokens
+
+
+    Cloud Endpoints:
+        Distributed API management system
+        Provides an API Console, hosting, logging, monitoring, and other features
+        Use with any APIs that support the OpenAPI Specification 
+        Supports applications tunning in App Engine, Google Kubernetes Engine, and Compute Engine
+        Clients include Android, iOS, and Javascript 
+
+        Interface definition:
+            - Open API
+            - gRPC API 
+
+        Authentication and authorization:
+            - Service-to-service authentication 
+            - User authentication: Firebase, Auth0, Google Authentication
+
+        Logging and monitoring:
+            - Cloud Logging
+            - Cloud Trace 
+
+        Management and scability:
+            - Extensible Service 
+            - Proxy Service 
+            - Management 
+            - Service Control 
+    
+
+    Apigee Edge:
+        - Specific focus on business problems, like rate limiting, quotas, and analytics
+        - Many Apigee Edge users provide a software service to other companies
+        - Backend services for Apigee Edge don't need to be in Google Cloud
+
+
+    Pub/Sub (A distributes messaging service):
+
+        - Publisher/Subscriber publish messages to subscribers 
+        - Handle distributed message-oriented architectures at scale
+
+        Features:
+            - Ensures at-least-once delivery
+            - No provisioning is required
+            - APIs are open 
+            - Global by default 
+            - Offers end-to-end encryption
+
+
+
+Infrastructure security design:
+    - Operational security
+
+    - Internet communication 
+
+    - Storage services 
+
+    - Service deployment:
+        Encryption of inter-service communication:
+            Google's services communicate with each other using remote procedure 
+            calls "RPCs". 
+            Google's infrastructure provides cryptographic privacy and integrity by 
+            automatically encrypting all infrastructure RPC traffic between data centers
+
+        User identity:
+            
+
+
+
+    - Hardware Infrastructure:
+        Hardware design and provenance: 
+            Both the server boards and the newtworking equipment in Google data centers are custom 
+            designed by Google. Google also designs custom chips, including a security chip 
+
+        Secure boot stack:
+            Google's server machines use a variety of technologies to ensure that they are booting
+            the corret software stacks.
+
+        Premises security:
+            Google designs and builds its own data centers, which incorporate multiple
+            layers of physical security protections.
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
 #####################################################################
 Test: Where should i store my files?
 
@@ -132,3 +241,24 @@ Which storage solution is a petabyte-scale NoSQL database?
 You're looking for an unstructured storage solution to archive documents that may 
 never be accessed again. Which Cloud Storage class is the best choice?
 - Archive Storage
+
+
+#####################################################################
+Test: There is an API for that
+
+Which platform used to develop and manage API proxies specifically focuses on business issues 
+such as rate limiting, quotas and analytics?
+- Apigee Edge
+
+Which statement about Pub/Sub is true?
+- Pub/Sub APIs are open.
+
+What does the acronym API mean?
+- application programming interface
+
+What API management system supports apps running on App Engine, 
+Google Kubernetes Engine, and Compute Engine?
+- Cloud Endpoints
+
+
+#####################################################################
