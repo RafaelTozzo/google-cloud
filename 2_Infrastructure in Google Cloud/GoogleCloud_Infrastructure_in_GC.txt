@@ -181,25 +181,8 @@ API (Application programming interface):
 
 
 Infrastructure security design:
-    - Operational security
 
-    - Internet communication 
-
-    - Storage services 
-
-    - Service deployment:
-        Encryption of inter-service communication:
-            Google's services communicate with each other using remote procedure 
-            calls "RPCs". 
-            Google's infrastructure provides cryptographic privacy and integrity by 
-            automatically encrypting all infrastructure RPC traffic between data centers
-
-        User identity:
-            
-
-
-
-    - Hardware Infrastructure:
+    - 1º Hardware Infrastructure
         Hardware design and provenance: 
             Both the server boards and the newtworking equipment in Google data centers are custom 
             designed by Google. Google also designs custom chips, including a security chip 
@@ -212,17 +195,97 @@ Infrastructure security design:
             Google designs and builds its own data centers, which incorporate multiple
             layers of physical security protections.
 
+
+    - 2º Service deployment
+        Encryption of inter-service communication:
+            Google's services communicate with each other using remote procedure 
+            calls "RPCs". 
+            Google's infrastructure provides cryptographic privacy and integrity by 
+            automatically encrypting all infrastructure RPC traffic between data centers
+
+        User identity:
+            Google's central identity service intelligently challenges user for additional
+            information based on certain risk factors.
+            Users can use secondary factors when signing in, including devices based on the
+            Universal 2nd Factor (U2F) open standard
+
+
+    - 3º Storage services
+        Encryption at rest:
+            Most Google applications access file storage indirectly vi storage
+            services and encryption.
+            Using centrally managed keys, encryption is applied at the layer
+            of these storage services.
+            Google also enables hardware encryption support in hard drives and SSDs
+
+
+    - 4º Internet communication 
+        Google Front End("GFE"):
+            Google Front End ensures that all redistered services use TLS connections
+            incorporating the correct certificates and following best practices.
         
+        Denial of Service ("DoS") protection:
+            Google has multi-tier, multi-layer DoS protections that reduce the risk of
+            any DoS impact on a service running behind a GFE.
 
 
+    - 5º Operational security
+        Intrusion detection:
+            Rules and machine intelligence give operational security engineers warnings
+            of possible incidents
+
+        Refucing insider risk:
+            Google limits and monitors the activities of employees who have access to the
+            infrastructure.
+
+        Employee Universal Second Factor (U2F)
+            All Google employee accounts require use of U2F-compatible Security Keys.
+
+        Software development practices:
+            Google employs central source control and requires two-party ewview of any new code.
+
+    
+    Google Cloud encryption options:
+        Encryption by default (only on Google Cloud)  simple complex
+
+        Customer-managed encryption keys (CMEK) medium complex
+            Cloud KMS:
+                - Manage keys in a cloud-hosted solution
+                - Encrypt and decrypt via API
+                - Automated and at-will key rotation 
+                - Symmetric and asymmetric key support
+
+        Customer-supplied encryption keys (CSEK) hard complex
+            - Gives users more control over their keys, but with greater management complexity.
+            - Users use their own AES-256-bit encryption keys and are responsible for generating them.
+            - Users are responsible for storing the keys providing them as part of Google Cloud API calls.
+            - Google Cloud will use the provided key to encrypt the data before saving it.
 
 
+    Cloud Identity:
+        Log in and manage resources using the same credentials used in existing Active Directory 
+        or LDAP systems
 
+        Google Admin Console can be used to disable user accounts and remove them from groups
+        when they leave
 
+        Available in free and premium editions
 
+        Already available to Google Workspace customers in the Google Admin Console
+        
+        IAM roles:
+            Basic IAM role 
+            Predefined IAM role 
+            Custom IAM role
 
+        User Authentication: Identity-Aware Proxy (IAP)
 
-
+        IAM Authorization:
+            Best practices for service accounts:
+                - Use caution when granting the serviceAccountUser role.
+                - Give a service account a display name that clearly identifies its purpose.
+                - Establish a naming convention for service accounts.
+                - Establish key rotation polices and methods.
 
 
 #####################################################################
@@ -259,6 +322,22 @@ What does the acronym API mean?
 What API management system supports apps running on App Engine, 
 Google Kubernetes Engine, and Compute Engine?
 - Cloud Endpoints
+
+
+#####################################################################
+Test: You can't secure the cloud, right?
+
+When a customer migrates an application to Google Cloud, which of the following is still their responsibility?
+- data security
+
+Which IAM role is the broadest in scope?
+- Basic
+
+At what level of Google Cloud infrastructure security will you encounter intrusion detection?
+- At the level of operational safety
+
+What encryption option can a customer use to encrypt data before sending that information to Google Cloud?
+- Client side encryption
 
 
 #####################################################################
