@@ -1,0 +1,83 @@
+Google Cloud Computing Foundations: Networking & Security
+
+https://www.cloudskillsboost.google/course_sessions/2945039/video/344857
+
+
+Virtual Private Cloud (VPC)
+    Is a secure, individual, private cloud-computing model hosted within a public cloud.
+    VPC networks connect Google Cloud resources to each other and to the internet.
+    Segmenting networks.
+    Using firewall rules to restrict access to instances.
+    Creating static routes to forward traffic to specific destinations.
+    Google VPC networks are global and can have subnets is any Google Cloud region Worldwide.
+
+
+    VPC networks:
+        Auto subnet mode:
+            - One subnet from each region is automatically created
+            - Set of predefined IP ranges
+            - Comes with default firewall rules 
+            - Expandable up to/16 only 
+            - Goof for isolated use cases (Proff of concepts(PoCs), testins, etc.)
+
+        Custom subnet mode:
+            - No subnets are automatically created 
+            - Subnets and IP ranges are defined 
+            - No default firewalls rules 
+            - Expandable to any RFC 1918 size 
+            - Recommende for Production environments
+
+        Public (external) IP addresses:
+            - Can be assigned from pool (temporary) or reserved (static).
+            - Billed when not attached to a running VM.
+            - VM doesn't know the external IP; it's mapped to the internal IP
+
+        Private (interal) IP addresses
+            - Allocated from subnet range to VMs by DHCP.
+            - DHCP lease is renewed every 24 hours.
+            - VM name and IP is registered with network-scoped DNS.
+
+        VPCs do not require a router to be provisioned:
+            - Built-in so you don't have to provision or manage a router
+            - Used to forward traffic from one instance to another
+
+        VPCs do not require a firewall to be provisioned:
+            - Restricts access to instances through both incoming and outgoing traffic 
+            - Rules can be defined through metadata tags on Compute Engine instances
+
+        VPC peering and sharing:
+            VPC peering:
+                A relationship between 2 VPCs can be established to exchange traffic. This opens up space for private 
+                RFC 1918 connectivity across 2 VPC networks, no matter whether or not they belong to the same project 
+                or the same organization. But don't forget that every VPC network has firewall rules to set what traffic 
+                is allowed or denied between networks. VPC Network Peering is a decentralized or distributed technique 
+                for multi-project networks because each network remains under the control of a group of administrators
+                and maintains its own global firewall and routing tables. Previously these projects used external IP 
+                addresses or VPNs to mediate private communication between VPC networks. However, VPC Network Peering 
+                does not deal with network latency, the security and expense of using VPNs or external IP addresses.
+
+
+            VPC shared:
+                With a Shared VPC, an organization can connect resources from multiple projects to a common VPC network, 
+                resources can communicate with each other securely and efficiently using internal IPs of that network. 
+                You need to designate a project as a host and attach one or more service projects to it.
+
+
+
+Google Cloud primary newtworking products:
+    - Google Cloud VPC: 
+        Comprehensive networking capabilities and infrastructure
+
+    - Cloud Load Balacing: 
+        High performance, scalable load balacing 
+
+    - Cloud CDN:
+        Low-latency, low-cost content delivery
+
+    - Cloud Interconnect:
+        Fast, high availability interconnect 
+
+    - Cloud DNS:
+        Highly available global DNS network
+
+    
