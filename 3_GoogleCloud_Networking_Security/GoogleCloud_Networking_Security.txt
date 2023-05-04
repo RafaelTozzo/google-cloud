@@ -68,8 +68,16 @@ Google Cloud primary newtworking products:
     - Google Cloud VPC: 
         Comprehensive networking capabilities and infrastructure
 
-    - Cloud Load Balacing: 
+    - Cloud Load Balancing: 
         High performance, scalable load balacing 
+        Fully distributed, software-defined managed service 
+        You can put Cloud Load Balacing in front of all of your traffic:
+            - HTTP(S)
+            - TCP traffic
+            - SSL traffic
+            - UDP traffic
+        Provides single as well as cross-region load balancing, including automatic multi-region failover
+        No "pre-warming" is required for anticipated spikes in traffic
 
     - Cloud CDN:
         Low-latency, low-cost content delivery
@@ -80,4 +88,181 @@ Google Cloud primary newtworking products:
     - Cloud DNS:
         Highly available global DNS network
 
-    
+
+
+Google VPNs:
+    IPsec VPN protocol:
+        - Creates a VPN "tunnel" connection 
+        - Uses Cloud Router to make the connection dynamic
+        - Lets other network and Google VPC exchange route information over the VPN using the Border Gateway Protocol 
+        - Not always the bet option because of security concerns or bandwidth realibility
+
+    Direct Peering:
+        - Puts router in the same public datacenter as a Google point of presence (PoP)
+        - Uses a route to exchange traffic between networks
+        - Connects to more than 100 Google points of presence around the world 
+
+    Carrier Peering:
+        - Puts router in the same public datacenter as a Google point of presence (PoP)
+        - Uses a route to exchange traffic between networks
+        - Connects to more than 100 Google points of presence around the world 
+
+    Dedicated Interconnect:
+        - Good solution for getting the highest uptimes for interconnection
+        - Allows for one or more direct, private connections to Google 
+        - Can be covered by up to a 99.99% SLA if connections have topologies that meet Google specification    
+        - Connections can be backed up by a VPN for even greater reability
+
+    Partner Interconnect:
+        - Provides connectivity between an on-premises network and a VPC network through a supported service provider 
+        - Can be configured to support mission-critical services or applications that can tolerate some downtime
+        - Can be covered by up to a 99.99% SLA if connections have topologies that meet Google specifications
+
+
+
+Infrastructure as Code (IaC):
+    - Infrastructure requirements are defined as code in a template that's human readable and machine consumable
+    - Use templates to automate building, modifying, and deleting infrastructure
+    - Templates can be stored, versioned, and shared
+    - Templates can be used to rebuild an infrastructure after a crash
+
+
+    Terraform:
+        - Create a template file HashiCorp Configuration Language (HCL)
+        - The template determines the actions needed to create the environment
+        - A deployment can be repeated as many times as required 
+        - Terraform uses the underlying APIs of each service to deploy your resources 
+        - Store and version-control Terraform templates in Cloud Source Repositories
+
+
+    IaC tools (supported by Google Cloud):
+        - Ansible
+        - CHEF
+        - Packer by HashiCorp
+        - Puppet
+
+
+    Monitoring benefits:
+        - Ensure continued system operations
+        - Uncover trend analyses over time 
+        - Build dashboards 
+        - Alert personnel when systems violate predefined SLOs 
+        - Compare systems and systems changed 
+        - Provide data for improved incident response
+
+
+    Products for operations roles:
+        Monitoring
+            - Provides visibility into the performace, uptime and overall health of 
+              cloud-powered applications
+            - Collects metrics, events, metadata from projects, logs, services, systems, 
+              agents, custom code, and various common application components includes
+              Cassandra, Nginx, Apache Web Server, Elasticsearch, and many others
+            - Ingests that data and generates insigths via dashboards, Metrics Explorer
+              charts, and atomated alerts
+
+        Logging 
+            - Analyze:
+                Analyze log data in real time with the integrates Logs Explorer
+                Analyze exported logs from Cloud Storage or BigQuery
+            
+            - Export:
+                Export to Cloud Storage, or Pub/Sub, or BigQuery
+                Create logs-based metrics for augmented Monitoring
+
+            - Retain:
+                Data access and service logs 30 days (configurable), and admin logs for 400 days 
+                Longer retention available in Cloud Storage or BigQuery
+
+            Key log categories:
+                Cloud Audit Logs:
+                    - Who did what where?
+                    - Admin Activity 
+                    - Data Access 
+                    - System Event 
+                    - Access Transparency 
+                
+                Agent Logs:
+                    - Fluentd agent 
+                    - Common third-party applications 
+                    - System software 
+                
+                Network Logs:
+                    - VPC flow
+                    - Firewall rules 
+                    - NAT gateway 
+                    - Load Balancer 
+
+                Service Logs: 
+                    - Standard Out / Error 
+                    - Created with API 
+
+        Error reporting 
+            - Counts, analyzes, and aggregates the crashes in your running cloud services
+            - Management interface displays the results with sorting and filtering capabilities 
+            - A dedicated view shows the error details: time chart, occurrences , affected user 
+              count, first-and last-ssen dates, and a cleaned exception stack trace 
+            - Create alerts to receive notifications on new errors
+
+            Cloud trace:
+                - Collects latency data from distributed applications and displays it in the Google Cloud Console
+                - Captures traces from applications deployed on App Engine, Compute Engine VMs, and Kubernetes
+                  Engine containers
+                - Performance insights are provided in near-real time
+                - Automatically analyzes all of your applications traces to generate in-deth latency reports to
+                  surface performance degradations
+                - Continuously gathers and analyzes trace data to automatically identify recent changes to 
+                  application performance 
+
+        
+        Debugging (Debugger)
+            - Debugs applications while they're running in production to examine code's function and performance
+              under actual production conditions
+            - Collaborates with other team members bu sharing debug sessions, simply by sending the Console URL 
+            - An application state in production can be captures at a specific line location with snapshots
+            - Easily integrates into existing developer workflows 
+            - Integrates with version control systems, such as Cloud Source Repositories, GitHub, Bitbucket, or GitLab
+
+        
+        Cloud Profiler
+            - Uses statistical techniques and extremely low-impact instrumentation that runs across all production 
+              application instances to provide a comple CPU and heap picture of an application 
+            - Allows developers to analyze applications running anywhere, including Google Cloud, other cloud platforms,
+              or on-premises, with support for Java, Go, Python, and Node.js 
+            - Presents the call hierarchy and resource consumption of the relevant function in an interactive flame graph 
+            
+
+#####################################################################
+Test: Help to network
+
+Choose the true statement.
+- VPCs are global and subnets are regional.
+
+What is used to forward traffic from one instance to another within the same network, across 
+subnets or even across Google Cloud zones without needing an external IP address?
+- routing table
+
+Which option would you choose if you needed cross-region load balancing for a web application?
+- HTTP(S) Load Balancing
+
+Which connectivity solution offers a direct connection to Google?
+- dedicated interconnect
+
+Which term describes where the Google Network is connected to the rest of the Internet?
+- Point of Presence (PoP)
+
+
+#####################################################################
+Test: Stay on top of the news
+
+Which tool ingests metrics, events, and metadata to generate insights using dashboards, Metrics Explorer charts, and automated alerts?
+- Cloud Monitoring
+
+Where to store and version your Terraform models?
+- Cloud Source Repositories
+
+Which of the following provides access to logs created by developers deploying code to Google Cloud?
+- service records
+
+In Cloud Logging, what is the default log retention period for data access logs?
+- 30 days
