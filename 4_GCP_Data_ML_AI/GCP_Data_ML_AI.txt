@@ -1,0 +1,134 @@
+Google Cloud Computing Foundations: Data, ML, and AI in Google
+
+https://www.cloudskillsboost.google/course_sessions/2964049/video/344686
+
+
+Big Data managed services:
+    Dataproc:
+        - Cost effective
+        - Fast and scalable  
+        - Large volumes of data
+        - Open source ecosystem 
+        - Fully managed 
+        - Image versioning 
+        - Built-in integration
+        - Create clusters quickly
+        - Process big data with Hadoop/Spark (open source technologies)
+            Apache Hadoop:
+                - Faster than traditional system 
+                - Low Cost 
+                - Provides More Authentication 
+                - Lengthy and Complex Framework
+
+            Apache Spark:
+                - 100 times faster than Hadoop
+                - High Cost 
+                - Provides fault tolerance through RDD 
+                - Simple and User Friendly System 
+
+
+    Dataflow:
+        - Analyze streaming data in real time 
+        - Create a pipeline to process data
+        - Fully automates operational tasks like resource management and performance optimization.
+        - Provides built-in support for falut-tolerant execution 
+        - Through the Cloud Console Dataflow provides near-real time statistics such as pipeline
+          throughput and lag, and consolidated worker log inspection.
+        - Integrates with Cloud Storage, Pub/Sub, Datastore, Clod Bigtable, and BigQuery for 
+          seamless data processing.
+
+
+    BigQuery:
+        - Modernize a data warehouse foundation
+        
+        - Storage plus analytics:
+            A place to store petabytes of data
+            A place to analyze data
+        
+        - Serveless:
+            Use SQL queries to answer questions
+        
+        - Flexixible pay-as-you-go pricing model:
+            Pay for what your query processes, or use a flat-rate option
+        
+        - Data encryption at rest by default:
+            Encrypt data stored on a disk, including SSDs and backup media. 
+        
+        -Built-in machine learning:
+            Write ML models directly in BigQuery using SQL
+
+        Patterns to load data into BigQuery:
+            - Batch load
+            - Streaming 
+            - Generated data(SQL)
+
+
+Automate work with machines:
+    AI (Artificial intelligence) vs ML (Machine learning):
+
+    AI (Artificial intelligence): 
+        An umbrella term that includes anything related to computers mimicking human intelligence 
+
+    ML (Machine learning): 
+        A subset of AI that mainly refers to supervised and unsupervised learning
+
+        Standard algorithm use cases:
+            - Detect a pattern in an image
+            - Predict the future of a times series 
+            - Understand/transcribe human speech/text
+        
+        ResNet standard algorithm for image classification:
+            - Trained ResNet model
+
+        ML options on Google Cloud:
+            BigQuery ML:
+                Use SQL queries to create and execute machine learning models in BigQuery
+
+            Vertex AI:
+                - Seamless
+                - Scalable 
+                - Sustainable 
+                - Speedy
+                - Provides two solutions in one:
+                    AutoML:
+                        no-code solution 
+                        Create models
+                        Manage models 
+                        Deploy models 
+
+                    Custom training:
+                        code-based solution
+                        Code your own ML environment to have the control over the ML pipeline.
+
+            Pre-build APIs:
+                Leverage ML models that have already been built and trained by Google.
+
+            Ai challenges: 
+                ML production:
+                    - scability
+                    - monitoring 
+                    - continuous integration and continuous delivery or deployment  
+
+                ML tools ease-of-use:
+                    - tools require advanced coding skills 
+                    - take focus away from model configuration 
+                    - no unified workflow 
+                    - difficulties finding tools    
+
+#####################################################################
+Test: You have the data, but what are you doing with it?
+
+Which option is not a BigQuery feature?
+-BigQuery runs on your local server
+
+Which option is a managed Spark and Hadoop service that benefits users with open source data tools for batch 
+processing, querying, streaming and machine learning?
+-dataproc
+
+You can use three basic patterns to load data into BigQuery. Which one involves using SQL statements to insert 
+rows into a current table or writing the results of a query to a table?
+-Data generated
+
+Which Google Cloud managed big data service is optimized for large-scale batch processing or long-running stream 
+processing of structured and unstructured data?
+-Dataflow
