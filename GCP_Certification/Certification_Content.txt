@@ -113,3 +113,62 @@ Section 4: Understanding Google Cloud security and operations (approximately 30%
     ●  Define monitoring, logging, and observability within the context of cloud operations 
 
     ●  Identify the Google Cloud resource monitoring and maintenance tools.
+
+
+#####################################################################################################
+    
+Section 1: 
+
+Organizations choose digital transformation framkeworks to:
+    - Foster innovation
+    - Generate new revenue streams 
+    - Adapt to market changes 
+    - Adap to customer needs
+
+Digital transformation helps organizations to:
+    - Change how they operate 
+    - Redefine relationships 
+    - Modernize applications 
+    - Create services 
+    - Deliver value 
+
+
+The different ways organizations can implement their information technology (or IT) infrastructure:
+    On-premises (On-prem):
+        - Hosted on-site
+        - Located and operated in a organization's data center 
+        - Traditional way of managing IT infrastructure 
+        - Doesn't require third-party access 
+        - Owners have physical control
+        - No payment for ongoing access
+        - Required physical space 
+        - Required a specialized room 
+        - Required  expert personnel 
+        - Difficult to scale 
+        - Acquire more computing resources than needed 
+
+    Private cloud:
+        - Dedicated to a single organization 
+        - Single-tenant or corporate cloud
+        - Self-service 
+        - Scalability 
+        - Elasticity 
+
+
+    Public cloud:
+        - On-demand availability of computing and infrastructure resources 
+        - No need to acquire configure, or manage resources 
+        - Pay only for what is used 
+
+        In public cloud have three types of cloud computing service models:
+        - IaaS (infrastructure as a service)
+
+        - PaaS (platform as a service)
+
+        - SaaS (software as a service)
+
+
+    Hybrid cloud:
+
+    Multicloud:
+

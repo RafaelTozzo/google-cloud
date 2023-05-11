@@ -259,7 +259,7 @@ reports. Which Google Cloud tool should the organization use?
 A) Cloud Profiler
 B) Cloud Debugger
 C) Cloud Trace
-D) Cloud Monitoring
+-D) Cloud Monitoring
 
 Feedback
 A) is not correct. Cloud Profiler helps analyze application performance by gathering CPU usage and memory-allocation information.
