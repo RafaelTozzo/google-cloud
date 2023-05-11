@@ -1,0 +1,115 @@
+Section 1: Introduction to digital transformation with Google Cloud (approximately 10% of the exam)
+
+1.1  Explain why cloud technology is revolutionizing business
+
+    ●  Define key terms such as cloud, cloud technology, data, and digital transformation
+
+1.2 Explain why it is critical for businesses to adopt new technology
+
+    ●  Compare and contrast cloud technology and traditional or on-premises technology
+
+    ●  Describe how customer expectations have changed because of cloud technology 
+
+    ●  Identify the business and technical considerations that organizations need to think about when adopting cloud technology, including: infrastructure; application and business platform modernization; the importance of data; security in the cloud
+
+
+
+Section 2: Innovating with data and Google Cloud (approximately 30% of the exam)
+
+2.1 Describe the role of data in digital transformation and the importance of a data-driven culture
+
+    ●  Explain how cloud technology enables data to be applied in new ways
+
+2.2 Identify common Google Cloud solutions for data management
+
+    ●  Recognize examples of structured and unstructured data
+
+2.3. Identify common Google Cloud solutions for smart analytics 
+
+    ●  Articulate the business benefits of storing data in the cloud
+
+    ●  Apply appropriate business use cases for databases, data warehouses, and data lakes 
+
+    ●  Explain the benefits of Google Cloud data products, including: Looker, BigQuery, Cloud Spanner, Cloud SQL, Cloud Storage
+
+2.4. Identify Google Cloud’s solutions for machine learning and AI
+
+    ●  Define artificial intelligence (AI) and machine learning (ML) 
+
+    ●  Outline the importance of data quality in ML prediction accuracy
+
+    ●  Describe Google Cloud’s differentiators with regard to AI and machine learning 
+
+    ●  Recognize the ways customers can use Google Cloud’s AI and ML solutions to create business value
+
+
+
+Section 3: Infrastructure and application modernization (approximately 30% of the exam)
+
+3.1 Learn what modernizing IT infrastructure with Google Cloud means
+
+    ●  Explain why legacy infrastructure struggles to deliver modern services to customers 
+
+    ●  Explain the benefits of modernizing infrastructure with cloud technology
+
+    ●  Differentiate between hybrid and multicloud infrastructures
+
+    ●  Differentiate between virtual machines, containers, and serverless computing within business use cases 
+
+    ●  Identify the Google Cloud solutions that help businesses modernize their infrastructure
+
+3.2 Understand modernizing applications with Google Cloud 
+
+    ●  Describe the business drivers for modernizing applications
+
+    ●  Describe the benefits of using cloud-native applications
+
+    ●  Apply the appropriate change pattern to different business use cases
+
+    ●  Explain the benefits of Google Kubernetes Engine, Anthos, and App Engine for application development
+
+3.3 Understand the value of APIs 
+
+    ●  Explain how application programming interfaces (APIs) can modernize legacy systems
+
+    ●  Describe how APIs can create new business value 
+
+    ●  Explain the benefits of Apigee
+
+
+
+Section 4: Understanding Google Cloud security and operations (approximately 30% of the exam)
+
+4.1 Describe financial governance in the cloud and Google Cloud's recommended best practices for effective cloud cost management 
+
+    ●  Explain how adopting cloud technology affects the total cost of ownership (TCO) 
+
+    ●  Identify the cost management strategy needed in a given business scenario 
+
+4.2 Describe a cloud security approach and Google Cloud security benefits
+
+    ●  Define fundamental cloud security terms, including privacy, availability, security, and control
+
+    ●  Explain what is meant by a shared responsibility model 
+
+    ●  Describe the security benefits of using Google Cloud
+
+    ●  Identify today's top cybersecurity challenges and threats to data privacy
+
+    ●  Demonstrate how organizations can control and manage access to cloud resources
+
+4.3 Explain how IT operations need to adapt to thrive in the cloud 
+
+    ●  Differentiate service availability requirements in the cloud versus in on-premises environments
+
+    ●  Describe the operational challenges that DevOps solves
+
+    ●  Apply the goals of site reliability engineering (SRE) to different business use cases 
+
+4.4 Identify Google Cloud solutions for cloud resource monitoring and application performance management 
+
+    ●  Explain the potential impact of unexpected or prolonged downtime
+
+    ●  Define monitoring, logging, and observability within the context of cloud operations 
+
+    ●  Identify the Google Cloud resource monitoring and maintenance tools.

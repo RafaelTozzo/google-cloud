@@ -89,19 +89,63 @@ Automate work with machines:
                 - Scalable 
                 - Sustainable 
                 - Speedy
-                - Provides two solutions in one:
-                    AutoML:
+
+                AutoML:
+                    - About AutoML:
                         no-code solution 
                         Create models
                         Manage models 
-                        Deploy models 
+                        Deploy models
 
-                    Custom training:
-                        code-based solution
-                        Code your own ML environment to have the control over the ML pipeline.
+                    - Supports four types of data:
+                        Image 
+                        Tabular
+                        Text 
+                        Video 
+                        (Yoou can combine differents objectives to solve a business problem)
+
+                    - You can upload data from:
+                        Cloud Storage 
+                        BigQuery 
+                        Local machine 
+
+                    - Pre-built APIs: Use pre-built ML models 
+                    - AutoML: Uses custom-built ML models
+
+                    - Powered by the latest ML research
+                    - Trains and evaluates multiple models
+                    - Produces an ensemble of ML models 
+                    - Chooses the best one 
+
+
+                Custom training:
+                    - Vertex AI Workbench
+                    - Code-based solution
+                    - Code your own ML environment to have the control over the ML pipeline.
+
 
             Pre-build APIs:
-                Leverage ML models that have already been built and trained by Google.
+                - Leverage ML models that have already been built and trained by Google.
+
+                - Speech-to-Text API:
+                    Converts audio to text for data processing
+                
+                - Cloud Natural Language API:
+                    Reconizes parts of speech called entities an sentiment 
+                
+                - Cloud Translation API:
+                    Convert text from one language to another 
+                
+                - Text-to-Speech API:
+                    Converts text into high-quality voice audio
+
+                - Vision API:
+                    Works with and recognizes content in static images
+
+                - Video Intelligence API:
+                    Reconizes motion and action in video    
+
+
 
             Ai challenges: 
                 ML production:
@@ -132,3 +176,16 @@ rows into a current table or writing the results of a query to a table?
 Which Google Cloud managed big data service is optimized for large-scale batch processing or long-running stream 
 processing of structured and unstructured data?
 -Dataflow
+
+
+#####################################################################
+Test: Automate work with machines
+
+Which option is a no-code solution that allows you to build your own machine learning models in Vertex AI with a point-and-click interface?
+- AutoML
+
+Which Google machine learning API can be used to convert audio to text for data processing?
+- Speech-to-Text API
+
+What is the name of Google's unified AI platform that brings together all the components of the machine learning workflow and ecosystem?
+- Vertex AI
