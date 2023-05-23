@@ -11,13 +11,13 @@ Curso 4: Data, ML, and AI in Google Cloud: https://www.cloudskillsboost.google/c
 
 Uma vez finalizados os 4 cursos, é necessário completar os laboratórios de desafio que testarão seus conhecimentos adquiridos (4 selos de habilidades- skill badges). 
 
-Selo de Habilidade 1:  Crie e gerencie recursos na nuvem 
+Selo de Habilidade 1:  https://www.cloudskillsboost.google/quests/120
 
-Selo de Habilidade 2: Executar tarefas de infraestrutura de base 
+Selo de Habilidade 2: https://www.cloudskillsboost.google/quests/118
 
-Selo de Habilidade 3: Criar e proteger redes no Google Cloud
+Selo de Habilidade 3: https://www.cloudskillsboost.google/quests/128
 
-Selo de Habilidade 4: Execute tarefas básicas de dados, ML e IA
+Selo de Habilidade 4: https://www.cloudskillsboost.google/quests/117
 
 Testes:
     Qual ferramenta de linha de comando faz parte do SDK Cloud?
