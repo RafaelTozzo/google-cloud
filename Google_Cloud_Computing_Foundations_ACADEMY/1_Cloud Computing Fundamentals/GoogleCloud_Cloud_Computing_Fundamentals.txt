@@ -11,7 +11,7 @@ Curso 4: Data, ML, and AI in Google Cloud: https://www.cloudskillsboost.google/c
 
 Uma vez finalizados os 4 cursos, é necessário completar os laboratórios de desafio que testarão seus conhecimentos adquiridos (4 selos de habilidades- skill badges). 
 
-Selo de Habilidade 1:  https://www.cloudskillsboost.google/quests/120
+Selo de Habilidade 1: https://www.cloudskillsboost.google/quests/120
 
 Selo de Habilidade 2: https://www.cloudskillsboost.google/quests/118
 
